@@ -383,6 +383,7 @@ nav.main-nav {
 	padding: $nav-padding;
 	background: #101010;
 	display: flex;
+	flex: 1;
 	justify-content: space-between;
 	flex-wrap: wrap;
 	flex-direction: row;
@@ -625,22 +626,37 @@ button {
 }
 
 @media (min-width: 1px) {
+	nav {
+		>* {
+			flex: inherit;
+		}
+	}
 	#logo-main {
 	display: none;
 	}
 	#search {
-	width: calc(100% - calc(32px * 1.15));
+	// width: calc(100% - calc(32px * 1.15));
+	flex-grow: 1;
+	width: 100%;
 	}
 	.vgrid {
 		grid-template-columns: repeat(1, calc(100% - $video-grid-margin));
 	}
 }
 @media (min-width: 500px) {
+	nav {
+		>* {
+			flex: 1 0 0;
+		}
+	}
 	#logo-main {
 	display: inherit;
 	}
     #search {
-	width: 55%;
+	display: flex;
+	min-width: 37.5%;
+	text-align: center;
+	flex-grow: 0;
 	}
 	.vgrid {
 		grid-template-columns: repeat(2, calc(50% - $video-grid-margin));

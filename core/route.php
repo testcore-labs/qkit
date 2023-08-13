@@ -73,7 +73,7 @@ class route {
 // im so well hidden!
 if(conf::get()["fw"]["enableEasterEgg"]) {
 route::get('/qkit', function () {
-}, ["Location" => "//github.com/"]);
+}, ["Location" => "//github.com/testCore-labs/qkit"]);
 }
 
 // yeah lol...
