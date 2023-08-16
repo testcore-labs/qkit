@@ -72,6 +72,10 @@ class route {
 
 // im so well hidden!
 if(conf::get()["fw"]["enableEasterEgg"]) {
+/* this is really intrusive so NO!
+if(PHP_OS_FAMILY == "Windows") {
+echo "<div style='display: block; width: 100%; position: absolute; top: 0; left: 0; background: RGBA(0,0,0,0.7); color: #fff; padding: 0.25em; box-sizing: border-box;'>Stinky windows...</div>";
+}*/
 route::get('/qkit', function () {
 }, ["Location" => "//github.com/testCore-labs/qkit"]);
 }

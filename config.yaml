@@ -1,18 +1,18 @@
 name: testtube
-version: a0.0.0
+version: 1.0.0-alpha
 debug: true
 
 fw:
   name: qKit
-  version: a0.0.1
+  version: 1.0.0-alpha
   enableEasterEgg: true 
   enableqKitHeaders: true # This shows what version it uses on the header.
 
 _db:
   host: localhost
   username: root
-  password: nil
-  name: nil
+  password: null
+  name: null
 
 # you could use this for apis for extensions IF we were to support them
 api:

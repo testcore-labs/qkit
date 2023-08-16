@@ -343,11 +343,6 @@ body {
 	font-size: $body-text-size;
 	font-family: $body-text-font !important;
 	color: $body-text-color;
-	word-wrap: break-word !important;
-	word-break: break-word !important;
-	height: 100%;
-	display: flex;
-	flex-direction: row;
 	background: $body-color;
 	&::after {
 		content: "";
@@ -379,6 +374,34 @@ body {
 		animation: bm_scanline 15s linear infinite;
 	}
 }
+
+.body {
+	word-wrap: break-word !important;
+	word-break: break-word !important;
+	height: 100%;
+	display: flex;
+	flex-direction: row;
+}
+
+::-webkit-scrollbar {
+  width: 15px;
+  height: 15px;
+}
+
+::-webkit-scrollbar-track-piece {
+  background-color: #c2d2e4;
+}
+
+::-webkit-scrollbar-thumb:vertical {
+  height: 30px;
+  background-color: #0a4c95;
+}
+
+* {
+scrollbar-width: thin;
+scrollbar-color: $secondary $body-color;
+}
+
 nav.main-nav {
 	padding: $nav-padding;
 	background: #101010;
@@ -628,7 +651,12 @@ button {
 @media (min-width: 1px) {
 	nav {
 		>* {
-			flex: inherit;
+			flex: 0 0 0;
+		}
+	}
+	nav.nav-sidebar {
+		>* {
+			flex: 1 0 0 !important;
 		}
 	}
 	#logo-main {

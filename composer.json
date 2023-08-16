@@ -3,6 +3,6 @@
         "twig/twig": "^3.7",
         "symfony/yaml": "^6.3",
         "scssphp/scssphp": "^1.11",
-        "doctrine/orm": "^2.16"
+        "rakibtg/sleekdb": "^2.15"
     }
 }

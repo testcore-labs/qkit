@@ -1,0 +1,9 @@
+Example: 
+YEAR.MONTH.DAY - VERSION 
+    About
+
+------------------------
+2023.08.13 - 1.0.0-alpha
+    The first ever "commit" of SemVer versioning scheme! We also added our github! https://github.com/testCore-labs/qkit
+    - Added NoSQL (SleekDB)
+    - Added defines like: __FWDIR__ (Framework directory), __DB__ (Database NoSQL)

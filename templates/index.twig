@@ -2,4 +2,8 @@
 
 {% block content %}
     tested some tubes ong on {{ conf.get()['name'] ~ ' ' ~ conf.get()['version'] }}
+    {% for i in 1..50 %}
+    {{ i }} <br>
+{% endfor %}
+
 {% endblock %}
