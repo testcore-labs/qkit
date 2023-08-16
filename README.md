@@ -6,3 +6,4 @@ A PHP MVC Framework from scratch.
 This project aims to create a simple & lightweight framework. 
 
 More will be written here later.
+ 
