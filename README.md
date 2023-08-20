@@ -7,3 +7,5 @@ This project aims to create a simple & lightweight framework.
 
 More will be written here later.
  
+# testtube?
+yeah for now theres a static version of the site.. the older screenshots of some of it working was on laravel.
