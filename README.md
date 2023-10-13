@@ -9,6 +9,9 @@ A PHP Framework from scratch.
 It's a framework aiming to create a fast and easy solution for people that don't want too much crammed in a framework..
 under 100kb.
 
+# I want a templating engine! I want this and that!
+I have already put those [here](https://github.com/testcore-labs/qkit-modules)
+
 ## Deployment
 
 To deploy this project, run:
