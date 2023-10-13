@@ -6,7 +6,8 @@
 A PHP Framework from scratch.
 
 # What is it's purpose?
-It's a framework aiming to create a fast and easy solution for people that don't want too much crammed in a framework.
+It's a framework aiming to create a fast and easy solution for people that don't want too much crammed in a framework..
+under 100kb.
 
 ## Deployment
 
