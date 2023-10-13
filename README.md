@@ -1,4 +1,8 @@
 # qkit
+[![MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/) 
+[![PHP](https://img.shields.io/badge/PHP-8.0+-7a86b8.svg)](https://www.php.net/)
+[![Composer](https://img.shields.io/badge/Composer-2.0.0+-f98e03.svg)](https://getcomposer.org/)
+
 A PHP Framework from scratch.
 
 # What is it's purpose?
