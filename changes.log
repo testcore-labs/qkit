@@ -1,0 +1,43 @@
+Example: 
+YEAR.MONTH.DAY - VERSION 
+    About
+    - List
+
+------------------------
+2023.08.13 - 1.0.0-alpha
+    The first ever "commit" of SemVer versioning scheme! We also added our github! https://github.com/testCore-labs/qkit
+    - Added NoSQL (SleekDB)
+    - Added defines like: __FWDIR__ (Framework directory), __DB__ (Database NoSQL)
+
+------------------------
+2023.09.02 - 1.1.0-alpha
+    I'm back, and ready to finish this, now not all things will stay because I'm aiming for a lightweight framework,
+    though these will become "modules", testtube will of COURSE keep them because it relies on them, 
+    such as bitverseio/identicon, rakibtg/sleekdb, cakephp's validator, scssphp compiler, delight-im's cookie and many
+    other libraries. Thank you for staying with me even if I "barely" update this, as now I have school and not ALWAYS
+    want to work on this.
+    - Added more defines
+    - Fixed routes not working when using GET, i.e: /test?echo=this, by exploding everything else after ? and 
+      using the first one.
+
+------------------------
+2023.10.13 - 1.0.0-beta
+    It's finally moving to BETA!!! I still need to add more features soon, but still, it's looking great,
+    in my opinion. Hope y'all enjoy the work I did.  
+    Also the routes support GET, POST and all of the above.
+    Route paths are now case-insensitive, we added categories, regexing the variable in the route path 
+    like "/test/{getthisvar}/f", you have to name it in the function () arguments, in the same order, 
+    examples in public/index.php.
+    - Added modules and plugins
+      + Modules are used for OFFICIAL libraries for the framework.
+      + Plugins are 3rd party libraries that can extend this framework.
+    - Removed all the testtube, testblox mentions. Modules too, as it's supposed to be OPTIONAL.
+    there's more but just explore it for yourself.
+    
+    Modules:
+    - Translate, let's you add multi language support with Symfony's translator to the framework.
+    - Twig, a wrapper for Symfony's Twig library.
+    - Extra, adds shortcuts and useful functions.
+    .. and more soon. Maybe I'll actually make the modules instead of putting a wrapper and calling it my own. 
+
+    Thank you for being patient. Report bugs on the repository of course.

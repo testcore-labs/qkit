@@ -1,0 +1,22 @@
+project:
+  name: x
+  about: "motto"
+  corp: generic # optional
+  version: 0.0.0-alpha # semantic versioning, optional
+  maintenance: 
+    value: true
+    reason: "x is being worked on"
+    time: 010101010101
+
+fw:
+  lang: en # doesnt really matter
+  name: qKit
+  debug: true
+  version: 1.0.0-beta
+  enableEasterEgg: false 
+  enableqKitHeaders: false # this shows what version it uses on the header
+
+# you could use this for apis for extensions IF we were to support them
+api:
+  hcaptcha-sitekey: "air"
+  hcaptcha-secret: "air"
