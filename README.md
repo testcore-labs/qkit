@@ -19,6 +19,34 @@ To deploy this project, run:
 ```bash
   composer require
 ```
+
+Then get nginx and make sure all of your requests go to /public/index.php as this framework has a router.
+
+nginx conf for example:
+```nginx
+server {
+        listen 80;
+        listen [::]:80;
+
+        root /home/qkit/public/;
+        index index.php;
+
+        server_name localhost;
+
+        location / {
+         try_files $uri $uri/ /index.php?$query_string;
+        }
+
+        location ~ \.php$ {
+         try_files $uri =404;
+         include fastcgi_params;
+         fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+         #fastcgi_index index.php;
+         fastcgi_pass unix:/run/php/php8.2-fpm.sock;
+        }
+}
+```
+
 .. and that's it. Dead simple.
 
 Will document more, just go into the `core/` folder and you will be able to read it mostly.. `public/index.php` has examples for routing. 
