@@ -1,6 +1,8 @@
 <?php
 namespace core; 
 use core\conf;
+use controllers\user;
+use core\modules\twig;
 
 class route {
     private static $routes = [];
@@ -42,7 +44,8 @@ class route {
             $pattern = str_replace('*', '(.*)', $pattern);
             $pattern .= 'i';
     
-            if($route['method'] === $method && preg_match($pattern, $uri, $matches)) {
+            if($route['method'] === $method || $route['method'] === "ANY") {
+                if(preg_match($pattern, $uri, $matches)) {
                 array_shift($matches);
                 $matches = array_map('urldecode', $matches);
                 foreach ($route['headers'] as $header => $value) {
@@ -56,9 +59,11 @@ class route {
                    }
                 }
                 return self::routeback($route['callback'], $matches);
+                }
             }
         }
         if (!in_array($uri, self::$routes)) {
+            http_response_code(404);
             if(is_callable(self::$r404)) {
             return call_user_func_array(self::$r404, []);
             } else {
@@ -76,7 +81,7 @@ class route {
         if ($drouteresult !== null) {
             return $drouteresult;
         }
-    
+
         foreach (self::$routes as $route) {
             if ($route['method'] === $method && $route['uri'] === $uri) {
                 foreach ($route['headers'] as $header => $value) {
@@ -104,5 +109,11 @@ route::get('/qkit', function () {
 }, ["Location" => "//github.com/testcore-labs/qkit"]);
 }
 
+//> compress the traffic in qzip encoding
+// say less
+if(conf::get()["fw"]["enableGzip2Qzip"]) {
+header("content-encoding: qzip");
+}
+
 // yeah lol...
-register_shutdown_function(function () {echo route::init(htmlspecialchars($_SERVER['REQUEST_METHOD']), htmlspecialchars($_SERVER['REQUEST_URI']));});
+register_shutdown_function(function () {$response = route::init(htmlspecialchars($_SERVER['REQUEST_METHOD']), htmlspecialchars($_SERVER['REQUEST_URI'])); /* HORRIBLE header("Content-Length: ".strlen($response)); */ echo $response; });
