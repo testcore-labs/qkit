@@ -1,8 +1,6 @@
 <?php
 namespace core; 
 use core\conf;
-use controllers\user;
-use core\modules\twig;
 
 class route {
     private static $routes = [];
