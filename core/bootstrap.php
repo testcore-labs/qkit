@@ -1,6 +1,6 @@
 <?php
 require(dirname(__DIR__)."/vendor/autoload.php");
-include(dirname(__DIR__)."/core/modules/extras.php");
+@include(dirname(__DIR__)."/core/modules/extras.php");
 use core\conf;
 spl_autoload_register(function ($class_name) {
     include dirname(__DIR__).'/'.str_replace('\\', '/', $class_name).'.php';
